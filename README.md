@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://www.bright.cn/">
-    <img src="https://mintlify.s3.us-west-1.amazonaws.com/brightdata/logo/light.svg" width="300" alt="Bright Data 标志">
+    <img src="https://mintlify.s3.us-west-1.amazonaws.com/brightdata/logo/light.svg" width="300" alt="Bright Data 徽标">
   </a>
 </p>
 
-# 品牌声誉监测工作流 🛡️
+# 品牌声誉监控工作流 🛡️
 
-使用 [Bright Data SDK](https://github.com/bright-cn/bright-data-sdk-python)、OpenAI 和 SendGrid 的 AI 驱动品牌声誉监测，自动搜索 Google 新闻、分析情绪，并通过电子邮件发送可执行洞察！
+**由 AI 驱动的品牌声誉监控，可自动搜索 Google 新闻、分析情感倾向，并使用 [Bright Data SDK](https://github.com/bright-cn/bright-data-sdk-python)、OpenAI 和 SendGrid 通过电子邮件提供可执行的洞察！**
 
 <div align="center">
   <img src="https://img.shields.io/badge/python-3.8+-blue"/>
@@ -15,64 +15,64 @@
 
 ---
 
-## 功能特性 🚀
+## 功能 🚀
 
-- 自动化新闻发现：使用 [Bright Data 的 SERP API](https://www.bright.cn/products/serp-api) 查找与你品牌相关的 Google 新闻页面。
-- 智能内容抽取：借助 [Bright Data 的 Web Unlocker API](https://www.bright.cn/products/web-unlocker) 并行抓取新闻文章内容。
-- AI 驱动分析：利用 OpenAI GPT-5-mini 进行情感分析、洞察提取，并识别最相关的品牌新闻。
-- 智能内容筛选：自动选出对品牌声誉最相关的新闻文章。
-- 专业电子邮件报告：生成带情感分析与可执行建议的精美 HTML 邮件报告。
-- 自动化投递：通过 SendGrid 将监测报告直接发送给相关方。
-- 可配置监测：通过 JSON 配置轻松自定义搜索查询与收件人列表。
+- **自动发现新闻**：使用 [Bright Data 的搜索引擎 API](https://www.bright.cn/products/serp-api)，通过品牌查询查找 Google 新闻页面。
+- **智能内容提取**：使用 [Bright Data 的网络解锁器 API](https://www.bright.cn/products/web-unlocker) 和并行处理，大规模抓取新闻文章。
+- **AI 驱动的分析**：利用 OpenAI GPT-5-mini 分析情感倾向、提取洞察，并识别与品牌监控最相关的新闻。
+- **智能内容筛选**：自动选择与品牌声誉最相关的热门新闻文章。
+- **专业电子邮件报告**：生成格式精美的 HTML 电子邮件报告，其中包含情感分析和可执行的洞察。
+- **自动交付**：通过 SendGrid 将监控报告直接发送给利益相关者。
+- **可配置监控**：通过 JSON 配置轻松自定义搜索查询和收件人列表。
 
 ---
 
 ## 工作原理 🔄
 
-1. 配置加载：从 `config.json` 读取监测设置
-2. 新闻发现：使用你的品牌查询搜索 Google SERP，获取 Google 新闻页面 URL
-3. 内容抽取：并行抓取所有相关新闻页面，获取 Markdown 内容
-4. 内容甄选：AI 从抓取的页面中识别最重要的新闻文章
-5. 单篇文章抓取：逐篇抓取所选新闻文章的详细内容
-6. 细致分析：为每篇文章进行情感分析与品牌洞察
-7. 报告生成：创建专业的 HTML 邮件报告
-8. 自动投递：通过邮件将报告发送给你的团队
+1. **加载配置**：从 `config.json` 读取监控设置
+2. **发现新闻**：使用品牌查询搜索 Google SERP，以查找 Google 新闻页面 URL
+3. **内容提取**：并行抓取所有相关新闻页面并获取 Markdown 内容
+4. **内容选择**：AI 从已抓取的页面中识别最重要的新闻文章
+5. **单篇文章抓取**：抓取每篇入选的新闻文章，以获取详细内容
+6. **详细分析**：对每篇文章进行情感分析并提取品牌洞察
+7. **生成报告**：创建专业的 HTML 电子邮件报告
+8. **自动交付**：通过电子邮件将报告发送给你的团队
 
 ---
 
-## 前置条件 🛠️
+## 前提条件 🛠️
 
 - Python 3.8+ 🐍
-- [Bright Data API token](https://docs.brightdata.com/api-reference/authentication) 🔑
-- OpenAI API key 🔑
-- SendGrid API key 🔑
+- [Bright Data API 令牌](https://docs.brightdata.com/api-reference/authentication) 🔑
+- OpenAI API 密钥 🔑
+- SendGrid API 密钥 🔑
 
 ---
 
 ## 安装 ⚙️
 
-1. 克隆此仓库：
+1. 克隆此代码仓库：
    ```bash
-   git clone https://github.com/bright-cn/brand-reputation-monitoring-workflow
-   cd brand-reputation-monitoring-workflow
+   git clone https://github.com/bright-cn/brand-reputation-monitor
+   cd brand-reputation-monitor
    ```
 2. 创建并激活虚拟环境：
    ```
    python -m venv .venv
    ```
-   在 Linux/macOS 上，执行：
+   在 Linux/macOS 上，使用以下命令激活：
    ```bash
    source .venv/bin/activate
    ```
-   在 Windows 上，执行：
+   在 Windows 上，运行：
    ```bash
    .venv\Scripts\activate
    ```
-3. 安装依赖：
+3. 安装依赖项：
    ```
    pip install python-dotenv brightdata-sdk openai sendgrid pydantic
    ```
-4. 在项目根目录创建 `.env`，填入你的 API 密钥：
+4. 在项目根目录中创建 `.env` 文件，并填入你的 API 密钥：
    ```
    BRIGHT_DATA_API_TOKEN=your_bright_data_api_token
    OPENAI_API_KEY=your_openai_api_key
@@ -83,7 +83,7 @@
 
 ## 配置 📝
 
-在根目录创建 `config.json`，自定义品牌监测工作流：
+在根目录中创建 `config.json`，以自定义品牌监控工作流：
 
 ```json
 {
@@ -103,19 +103,19 @@
 }
 ```
 
-配置字段说明：
+**配置字段**：
 
-- `search_queries`：用于监测品牌的搜索词列表（支持多条）
-- `num_news`：详细分析的文章数量（默认：`5`）
-- `sender`：发送报告的邮箱地址（须在 SendGrid 验证）
-- `recipients`：接收监测报告的邮箱地址列表
+- `search_queries`：用于监控品牌的搜索词列表（支持多个查询）
+- `num_news`：要进行详细分析的热门文章数量（默认值：`5`）
+- `sender`：用于发送报告的电子邮件地址（必须在 SendGrid 中完成验证）
+- `recipients`：用于接收监控报告的电子邮件地址列表
 
 ---
 
 ## 项目结构 📁
 
 ```
-brand-reputation-monitoring-workflow/
+brand-reputation-monitor/
 ├── .venv/
 ├── .env
 ├── config.json
@@ -126,22 +126,22 @@ brand-reputation-monitoring-workflow/
 
 ## 使用方法 ▶️
 
-运行品牌监测工作流：
+使用以下命令运行品牌监控工作流：
 
 ```
 python workflow.py
 ```
 
-工作流将：
+该工作流将：
 
-1. 🔍 为已配置的查询搜索 Google SERP，并提取 Google 新闻 URL
-2. 📰 抓取 Google 新闻页面，汇总所有可用文章 URL
-3. 🤖 使用 AI 选择最相关的品牌监测文章
-4. 📄 抓取单篇新闻的详细内容
-5. 🧠 为每篇文章生成 AI 洞察与情感分析
+1. 🔍 针对已配置的查询搜索 Google SERP，并提取 Google 新闻 URL
+2. 📰 爬取 Google 新闻页面，以获取所有可用的文章 URL
+3. 🤖 使用 AI 选择与品牌监控最相关的文章
+4. 📄 抓取单篇新闻文章，以获取详细内容
+5. 🧠 为每篇文章生成 AI 驱动的洞察和情感分析
 6. 📧 向你的团队发送专业的 HTML 报告
 
-示例输出：
+**输出示例：**
 
 ```
 Retrieving Google News page URLs for the following search queries: nike, nike shoes
@@ -173,82 +173,82 @@ Email sent!
 
 ---
 
-## 邮件报告内容 📊
+## 电子邮件报告功能 📊
 
-每封自动化报告包含：
+每份自动报告均包含：
 
-- 文章摘要：每篇新闻约 30 字的简洁摘要
-- 情感分析：正向、负向或中性情绪分类，并带颜色标签
-- 可执行洞察：3–5 条关键要点（每条 10–12 字）
-- 直接链接：便于深度阅读的原文链接
-- 专业格式：整洁、响应式的 HTML 设计，适合面向干系人
+- **文章摘要**：为每篇新闻生成简洁的 30 词摘要
+- **情感分析**：使用彩色标签标注正面、负面或中性的情感分类
+- **可执行的洞察**：提供 3–5 条品牌声誉管理的关键要点（每条 10–12 个词）
+- **直接链接**：轻松访问原始文章，以便深入审阅
+- **专业格式**：简洁的响应式 HTML 设计，可直接提供给利益相关者
 
 ---
 
-## 高级配置 🧑‍💻
+## 高级配置 🧑💻
 
 ### 自定义搜索参数
 
-在 `config.json` 中修改搜索查询、发件人、收件人以及新闻数量，以适应不同的监测场景。
+修改 `config.json` 中的搜索查询以适应不同的监控场景，并配置发件人、收件人和新闻条目数量。
 
-### 定时任务
+### 自动化调度
 
-使用 cron 设置自动化监测：
+使用 cron 任务设置自动监控：
 
 ```bash
-# 每周一上午 9 点运行
+# Run every Monday at 9 AM
 0 9 * * 1 /usr/bin/python3 /path/to/your/project/workflow.py
 ```
 
 ### 自定义分析提示词
 
-在 `process_news_list()` 函数中修改系统提示词，以获取更契合行业的洞察。
+修改 `process_news_list()` 函数中的系统提示词，对 AI 分析进行微调，以获得特定行业的洞察。
 
-### 下一步与增强
+### 后续步骤与增强功能
 
-- 添加记忆层：避免重复分析相同文章
-- SendGrid 模板：使用统一邮件模板以标准化报告
-- 云存储：将报告归档到 S3 用于历史分析
-
----
-
-## API 集成细节 🔧
-
-本工作流通过 Bright Data SDK 调用以下强大 API：
-
-- [Bright Data SERP API](https://www.bright.cn/products/serp-api)：从搜索结果中发现 Google 新闻 URL
-- [Bright Data Web Unlocker API](https://www.bright.cn/products/web-unlocker)：并行抽取内容，输出面向 LLM 的 Markdown
-- OpenAI GPT-5-mini：进行内容分析与 HTML 报告生成
-- SendGrid Email API：发送专业报告
+- **添加记忆层**：避免多次分析同一篇文章
+- **SendGrid 模板**：使用统一的电子邮件模板生成标准化报告
+- **云存储**：将报告归档到 S3，以便进行历史分析
 
 ---
 
-## 故障排除与提示 💡
+## API 集成详情 🔧
 
-- API 密钥：请确保所有 API 密钥已在 `.env` 中正确配置
-- 邮件验证：发件邮箱需在 SendGrid 后台完成验证
-- 搜索查询：使用更具体的品牌词与变体以提升监测覆盖度
-- 内容质量：更精确的查询通常带来更高质量的分析结果
+此工作流通过 Bright Data SDK 利用功能强大的 API：
 
-常见问题：
-
-- 未找到新闻：尝试更宽泛的搜索词，或确认近期是否有相关报道
-- 邮件未送达：在 SendGrid 验证发件邮箱，并检查收件方垃圾箱
-- 分析质量不佳：优化搜索查询以获取更相关的文章
-- 403 Forbidden 错误：确认发件邮箱已在 SendGrid 账户中验证
+- **[Bright Data 搜索引擎 API](https://www.bright.cn/products/serp-api)**：用于从搜索结果中发现 Google 新闻 URL
+- **[Bright Data 网络解锁器 API](https://www.bright.cn/products/web-unlocker)**：用于以针对 LLM 优化的 Markdown 格式并行提取内容
+- **OpenAI GPT-5-mini**：用于内容分析和 HTML 报告生成
+- **SendGrid Email API**：用于专业报告交付
 
 ---
 
-## 适用场景 🎯
+## 故障排除与技巧 💡
 
-- 危机管理：及早发现负面品牌提及
-- 竞争情报：监测竞品新闻与市场定位
-- 公关活动跟踪：评估市场活动的报道与情感倾向
-- 产品发布监测：跟踪新品口碑与反馈
-- 高管简报：定期的品牌健康报告供领导层参考
+- **API 密钥**：确保所有 API 密钥均已在 `.env` 文件中正确设置
+- **电子邮件验证**：发件人电子邮件地址必须在 SendGrid 控制面板中完成验证
+- **搜索查询**：使用具体的品牌词及其变体，实现全面监控
+- **内容质量**：查询越具体，分析结果越好
+
+### 常见问题：
+
+- **未找到新闻**：尝试使用范围更广的搜索查询，或检查你的品牌近期是否有媒体报道
+- **电子邮件未送达**：在 SendGrid 中验证发件人电子邮件地址，并检查收件人的垃圾邮件文件夹
+- **分析质量**：优化搜索查询，以获取更相关的文章
+- **403 Forbidden 错误**：确保发件人电子邮件地址已在 SendGrid 账户中完成验证
 
 ---
 
-**时刻把握品牌声誉脉搏！🚀**
+## 使用场景 🎯
 
-基于 [Bright Data 的 AI 基础设施](https://www.bright.cn/ai) 构建，面向实时网络数据解决方案。
+- **危机管理**：及早发现对品牌的负面提及
+- **竞争情报**：监控竞争对手的新闻和市场定位
+- **公关活动跟踪**：衡量营销活动的报道量和情感倾向
+- **产品发布监控**：跟踪市场对新品发布的反响和反馈
+- **高管简报**：定期为管理团队提供品牌健康状况报告
+
+---
+
+**时刻领先一步，守护你的品牌声誉！🚀**
+
+使用 [Bright Data 的 AI 基础设施](https://www.bright.cn/ai)构建 ❤️，提供实时网页数据解决方案。
